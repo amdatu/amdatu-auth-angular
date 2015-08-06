@@ -1,0 +1,30 @@
+
+<div class="container">
+	<div class="row">
+    	<div class="col-xs-12 col-md-8 col-md-offset-2 hidden-xs vpadding">
+            <alert type="danger" ng-show="loginController.error">{{'LOGIN_INVALID' | translate}}</alert>
+            <alert type="success" ng-show="loginController.accountCreated" ng-bind="'LOGIN_ACCOUNT_CREATED' | translate"></alert>
+            <form role="form" id="loginForm">
+                <div class="loginwithaccount">
+                    <div class="form-group">
+                        <label for="inputEmail" ng-bind="'LOGIN_EMAIL' | translate"></label>
+                        <input type="email" class="form-control" id="inputemail" ng-model="loginController.email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputPassword" ng-bind="'LOGIN_PASSWORD' | translate"></label>
+                        <input type="password" class="form-control" id="inputPassword" ng-model="loginController.password">
+                    </div>
+                    <div class="btn btn-primary" ng-bind="'LOGIN_BUTTON' | translate" ng-click="loginController.login()"></div>
+                    <span ng-bind-html="'LOGIN_RESET' | translate"></span>
+                </div>
+                <div>
+                    <span ng-bind="'LOGIN_NO_ACCOUNT_YET' | translate"></span>
+                    <a href="#/signup" class="btn btn-default btn-signup" ng-bind="'LOGIN_SIGNUP_BUTTON' | translate"></a>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,35 @@
+{
+  "name": "amdatu-auth-angular",
+  "version": "0.0.0",
+  "authors": [
+    "Paul Bakker <paul.bakker@luminis.eu>"
+  ],
+  "description": "Angular UI for the Amdatu Auth backend",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "authentication",
+    "authorization"
+  ],
+  "license": "ASL",
+  "homepage": "http://amdatu.org",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-bootstrap": "~0.13.2",
+    "angular-sanitize": "~1.4.3",
+    "angular-translate": "~2.7.2",
+    "angular-route": "~1.4.3",
+    "angular": "~1.4.3",
+    "bootstrap": "~3.3.5",
+    "requirejs-domready": "~2.0.1",
+    "requirejs": "~2.1.20",
+    "rxjs": "~3.0.0"
+  }
+}

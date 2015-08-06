@@ -1,0 +1,48 @@
+<div class="container-fluid">
+    <div class="col-md-12 memberedit">
+        <h1>{{'MEMBERSEDIT_PERSONAL_DETAILS' | translate}}</h1>
+        <form>
+            <div class="form-group">
+                <label for="inputFirstname" ng-bind="'SIGNUP_FIRSTNAME' | translate"></label>
+                <input type="text" id="inputfirstname" class="form-control" ng-model="memberEditController.selected.firstname">
+            </div>
+
+            <div class="form-group">
+                <label for="inputLastname" ng-bind="'SIGNUP_LASTNAME' | translate"></label>
+                <input type="text" id="inputLastname" class="form-control" ng-model="memberEditController.selected.lastname">
+            </div>
+
+            <div class="form-group">
+                <label for="inputEmail" ng-bind="'SIGNUP_EMAIL' | translate"></label>
+                <input type="text" id="inputEmail" class="form-control" ng-model="memberEditController.selected.email">
+            </div>
+
+            <div class="form-group">
+                <label for="inputEmail" ng-bind="'SIGNUP_PASSWORD' | translate"></label>
+                <input type="password" id="inputPassword" class="form-control" ng-model="memberEditController.selected.password">
+            </div>
+
+            <div class="form-group">
+                <button class="btn btn-primary" ng-click="memberEditController.save()">Save</button>
+                <button class="btn btn-danger" ng-click="memberEditController.delete()">Delete</button>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+
+
+<script type="text/ng-template" id="myModalContent.html">
+    <div class="modal-header">
+        <h3 class="modal-title">Remove</h3>
+    </div>
+    <div class="modal-body">
+        Are you sure to remove <span style="font-weight: bold" ng-bind="modalController.member.firstname"></span> <span style="font-weight: bold" ng-bind="modalController.member.lastname"></span>?
+
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" ng-click="modalController.ok()">OK</button>
+        <button class="btn btn-warning" ng-click="modalController.cancel()">Cancel</button>
+    </div>
+</script>

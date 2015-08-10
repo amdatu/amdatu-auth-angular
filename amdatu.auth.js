@@ -73,5 +73,18 @@ define(["require", "exports", 'angular', 'login/LoginController', 'login/LoginSe
     authModule.config(['$httpProvider', function ($httpProvider) {
         $httpProvider.defaults.withCredentials = true;
     }]);
+    authModule.directive("admin", ['LoginService', function (loginService) {
+        return {
+            restrict: "E",
+            transclude: true,
+            template: "<div ng-if='isAdmin'><ng-transclude></ng-transclude></div>",
+            link: function ($scope, element, attrs) {
+                loginService.isAdmin().subscribe(function (isAdmin) {
+                    $scope['isAdmin'] = isAdmin;
+                    console.log(isAdmin);
+                });
+            }
+        };
+    }]);
     return authModule;
 });

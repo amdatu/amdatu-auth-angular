@@ -1,4 +1,4 @@
-// <reference path="typeScriptDefenitions/libs.d.ts" />
+/// <reference path="../typescriptDefinitions/libs.d.ts" />
 
 import LoginService = require('LoginService')
 

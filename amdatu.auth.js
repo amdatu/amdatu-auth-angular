@@ -3,9 +3,8 @@
 /// <amd-dependency path="angular-translate"/>
 /// <amd-dependency path="angular-sanitize"/>
 /// <amd-dependency path="angular-bootstrap"/>
-/// <amd-dependency path="directives/MemberDirectives"/>
-define(["require", "exports", 'angular', 'login/LoginController', 'login/LoginService', 'login/PasswordResetController', 'admin_members/MembersController', 'admin_members/MembersService', 'admin_members/MemberEditController', 'admin_members/RemoveMemberModalController', "angular-route", "angular-translate", "angular-sanitize", "angular-bootstrap", "directives/MemberDirectives"], function (require, exports, angular, LoginController, LoginService, PasswordResetController, MembersController, MembersService, MemberEditController, RemoveMemberModalController) {
-    var authModule = angular.module('amdatu.auth', ['ngRoute', 'pascalprecht.translate', 'ngSanitize', 'ui.bootstrap', 'MemberDirectives']);
+define(["require", "exports", 'angular', 'login/LoginController', 'login/LoginService', 'login/PasswordResetController', 'admin_members/MembersController', 'admin_members/MembersService', 'admin_members/MemberEditController', 'admin_members/RemoveMemberModalController', "angular-route", "angular-translate", "angular-sanitize", "angular-bootstrap"], function (require, exports, angular, LoginController, LoginService, PasswordResetController, MembersController, MembersService, MemberEditController, RemoveMemberModalController) {
+    var authModule = angular.module('amdatu.auth', ['ngRoute', 'pascalprecht.translate', 'ngSanitize', 'ui.bootstrap']);
     authModule.controller('LoginController', LoginController);
     authModule.service('LoginService', LoginService);
     authModule.controller('PasswordResetController', PasswordResetController);

@@ -3,7 +3,6 @@
 /// <amd-dependency path="angular-translate"/>
 /// <amd-dependency path="angular-sanitize"/>
 /// <amd-dependency path="angular-bootstrap"/>
-/// <amd-dependency path="directives/MemberDirectives"/>
 
 import angular = require('angular')
 import LoginController = require('login/LoginController');
@@ -15,7 +14,7 @@ import MemberEditController = require('admin_members/MemberEditController');
 import RemoveMemberModalController = require('admin_members/RemoveMemberModalController');
 
 
-var authModule: ng.IModule = angular.module('amdatu.auth', ['ngRoute', 'pascalprecht.translate', 'ngSanitize', 'ui.bootstrap', 'MemberDirectives']);
+var authModule: ng.IModule = angular.module('amdatu.auth', ['ngRoute', 'pascalprecht.translate', 'ngSanitize', 'ui.bootstrap']);
 
 authModule.controller('LoginController', LoginController);
 authModule.service('LoginService', LoginService);

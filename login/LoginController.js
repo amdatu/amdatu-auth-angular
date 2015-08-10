@@ -15,7 +15,7 @@ define(["require", "exports"], function (require, exports) {
         LoginController.prototype.login = function () {
             var _this = this;
             this.loginService.loginUsingEmail(this.email, this.password).subscribe(function (loginResult) {
-                _this.$location.path("main");
+                _this.$location.path("/");
             }, function (e) {
                 _this.error = true;
             });

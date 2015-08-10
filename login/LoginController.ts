@@ -19,7 +19,7 @@ class LoginController {
 
     login() {
         this.loginService.loginUsingEmail(this.email, this.password).subscribe((loginResult) => {
-            this.$location.path("main");
+            this.$location.path("/");
 
         }, (e) => {
             this.error = true;

@@ -5,7 +5,8 @@ require.config({
         'angular-translate': 'bower_components/angular-translate/angular-translate',
         'angular-sanitize': 'bower_components/angular-sanitize/angular-sanitize',
         'angular-bootstrap': 'bower_components/angular-bootstrap/ui-bootstrap-tpls',
-        'Rx' : 'bower_components/rxjs/dist/rx.lite'
+        'Rx' : 'bower_components/rxjs/dist/rx.lite',
+        'lodash' : 'bower_components/lodash/lodash'
     },
 
     shim: {

@@ -1,6 +1,7 @@
 /// <reference path="../typescriptDefinitions/libs.d.ts"/>
 
 import Rx = require('Rx')
+import _ = require('lodash')
 
 class LoginService {
     static $inject = ['$http', 'BASE_URL', '$location', '$rootScope'];

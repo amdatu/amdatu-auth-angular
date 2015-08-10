@@ -24,8 +24,6 @@ authModule.service('MembersService', MembersService);
 authModule.controller('MemberEditController', MemberEditController);
 authModule.controller('RemoveMemberModalController', RemoveMemberModalController);
 
-authModule.constant('BASE_URL', 'http://localhost:8080');
-
 authModule.config(['$routeProvider', ($routeProvider : ng.route.IRouteProvider) => {
     $routeProvider.when('/login', {
         templateUrl: 'login/views/login.html',

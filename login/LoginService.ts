@@ -81,9 +81,9 @@ class LoginService {
     }
 
     loginCheck() {
-        if(!this.member) {
-            this.$location.path('login');
-        }
+        this.getMember().subscribe(() => {}, () => {
+            this.$location.path('login')
+        });
     }
 }
 

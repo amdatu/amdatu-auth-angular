@@ -79,6 +79,12 @@ class LoginService {
     isAdmin() : Rx.Observable<boolean> {
         return Rx.Observable.fromPromise(this.$http.get(this.BASE_URL + '/auth/admin')).map((result) => result.data);
     }
+
+    loginCheck() {
+        if(!this.member) {
+            this.$location.path('login');
+        }
+    }
 }
 
 export = LoginService;

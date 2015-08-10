@@ -70,6 +70,11 @@ define(["require", "exports", 'Rx', 'lodash'], function (require, exports, Rx, _
         LoginService.prototype.isAdmin = function () {
             return Rx.Observable.fromPromise(this.$http.get(this.BASE_URL + '/auth/admin')).map(function (result) { return result.data; });
         };
+        LoginService.prototype.loginCheck = function () {
+            if (!this.member) {
+                this.$location.path('login');
+            }
+        };
         LoginService.$inject = ['$http', 'BASE_URL', '$location', '$rootScope'];
         return LoginService;
     })();

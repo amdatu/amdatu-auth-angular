@@ -7,6 +7,7 @@ class LoginController {
     password : string;
     error = false;
     accountCreated = false;
+    passwordReset = false;
 
     static $inject = ['LoginService', '$location', '$rootScope'];
 
@@ -15,6 +16,11 @@ class LoginController {
         if(accountCreated) {
             this.accountCreated = true;
         }
+        var passwordReset = $location.search()['passwordreset'];
+        if (passwordReset) {
+            this.passwordReset = true;
+        }
+
     }
 
     login() {

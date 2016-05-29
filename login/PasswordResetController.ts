@@ -8,7 +8,6 @@ class PasswordResetController {
 
     email : string;
     showProceed : boolean;
-    showSucceeded : boolean;
     token : string;
     password : string;
     password2 : string;
@@ -28,7 +27,7 @@ class PasswordResetController {
 
     confirm() {
         this.loginService.confirmPasswordReset(this.token, this.password).subscribe(() => {
-            this.showSucceeded = true;
+           this.$location.url("/login?passwordreset");
         });
     }
 }

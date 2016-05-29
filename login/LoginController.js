@@ -7,9 +7,14 @@ define(["require", "exports"], function (require, exports) {
             this.$rootScope = $rootScope;
             this.error = false;
             this.accountCreated = false;
+            this.passwordReset = false;
             var accountCreated = $location.search()['accountcreated'];
             if (accountCreated) {
                 this.accountCreated = true;
+            }
+            var passwordReset = $location.search()['passwordreset'];
+            if (passwordReset) {
+                this.passwordReset = true;
             }
         }
         LoginController.prototype.login = function () {

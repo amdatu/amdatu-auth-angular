@@ -4,6 +4,7 @@
     	<div class="col-xs-12 col-md-8 col-md-offset-2 hidden-xs vpadding">
             <alert type="danger" ng-show="loginController.error">{{'LOGIN_INVALID' | translate}}</alert>
             <alert type="success" ng-show="loginController.accountCreated" ng-bind="'LOGIN_ACCOUNT_CREATED' | translate"></alert>
+            <alert type="alert alert-success" ng-show="passwordResetController.showSucceeded" ng-bind="'PASSWORD_RESET_SUCCEEDED' | translate"></alert>
             <form role="form" id="loginForm">
                 <div class="loginwithaccount">
                     <div class="form-group">

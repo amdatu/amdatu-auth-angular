@@ -19,7 +19,7 @@ define(["require", "exports"], function (require, exports) {
         PasswordResetController.prototype.confirm = function () {
             var _this = this;
             this.loginService.confirmPasswordReset(this.token, this.password).subscribe(function () {
-                _this.showSucceeded = true;
+                _this.$location.url("/login?passwordreset");
             });
         };
         PasswordResetController.$inject = ['LoginService', '$location', '$routeParams'];
